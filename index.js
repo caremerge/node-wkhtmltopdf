@@ -145,3 +145,4 @@ function wkhtmltopdf(input, options, callback) {
 
 wkhtmltopdf.command = 'wkhtmltopdf';
 module.exports = wkhtmltopdf;
+module.exports.render = wkhtmltopdf;
