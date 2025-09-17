@@ -105,10 +105,10 @@ function wkhtmltopdf(input, options, callback) {
 
   // Set larger buffer sizes for child process streams to prevent hanging
   if (child.stdout && child.stdout._readableState) {
-    child.stdout._readableState.highWaterMark = 1024 * 1024; // 1MB buffer
+    child.stdout._readableState.highWaterMark = 4096 * 4096;
   }
   if (child.stderr && child.stderr._readableState) {
-    child.stderr._readableState.highWaterMark = 1024 * 1024; // 1MB buffer
+    child.stderr._readableState.highWaterMark = 4096 * 4096;
   }
 
   // call the callback with null error when the process exits successfully
